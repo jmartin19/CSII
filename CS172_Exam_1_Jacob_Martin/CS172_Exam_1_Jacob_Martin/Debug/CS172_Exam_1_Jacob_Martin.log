@@ -1,0 +1,96 @@
+﻿Build started 3/3/2016 10:31:36 PM.
+     1>Project "D:\Computer Science\Programs\CS172_Exam_1_Jacob_Martin\CS172_Exam_1_Jacob_Martin\CS172_Exam_1_Jacob_Martin.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Event.cpp Main.cpp Venue.cpp
+         Venue.cpp
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.h(8): error C3646: 'scheduledEvents': unknown override specifier
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.h(8): error C2143: syntax error: missing ',' before '['
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.h(8): error C2143: syntax error: missing ')' before ';'
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.h(8): error C2238: unexpected token(s) preceding ';'
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.h(12): error C2061: syntax error: identifier 'string'
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.h(14): error C3646: 'findEvent': unknown override specifier
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.h(14): error C2059: syntax error: '('
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.h(14): error C2238: unexpected token(s) preceding ';'
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.h(15): error C3646: 'findEvent': unknown override specifier
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.h(15): error C2059: syntax error: '('
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.h(15): error C2238: unexpected token(s) preceding ';'
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\event.h(9): error C3646: 'Title': unknown override specifier
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\event.h(9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\event.h(12): error C2061: syntax error: identifier 'string'
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\event.h(14): error C3646: 'getTitle': unknown override specifier
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\event.h(14): error C2059: syntax error: '('
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\event.h(14): error C2238: unexpected token(s) preceding ';'
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\event.h(16): error C2061: syntax error: identifier 'string'
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.cpp(16): error C2065: 'scheduledEvents': undeclared identifier
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.cpp(24): error C2511: 'void Venue::addEvent(int,std::string)': overloaded member function not found in 'Venue'
+         d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.h(6): note: see declaration of 'Venue'
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.cpp(25): error C2597: illegal reference to non-static member 'Venue::numEvents'
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.cpp(25): error C3867: 'Venue::numEvents': non-standard syntax; use '&' to create a pointer to member
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.cpp(28): error C2352: 'Venue::validTime': illegal call of non-static member function
+         d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.h(10): note: see declaration of 'Venue::validTime'
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.cpp(33): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'Event'
+         d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.cpp(33): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.cpp(34): error C2597: illegal reference to non-static member 'Venue::numEvents'
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.cpp(34): error C3867: 'Venue::numEvents': non-standard syntax; use '&' to create a pointer to member
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.cpp(34): error C2105: '++' needs l-value
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.cpp(46): error C2065: 'scheduledEvents': undeclared identifier
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.cpp(46): error C2228: left of '.getTime' must have class/struct/union
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.cpp(54): error C2039: 'findEvent': is not a member of 'Venue'
+         d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.h(6): note: see declaration of 'Venue'
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.cpp(55): error C2270: 'findEvent': modifiers not allowed on nonmember functions
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.cpp(59): error C2065: 'scheduledEvents': undeclared identifier
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.cpp(59): error C2228: left of '.getTime' must have class/struct/union
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.cpp(61): error C2065: 'scheduledEvents': undeclared identifier
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.cpp(68): error C2039: 'findEvent': is not a member of 'Venue'
+         d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.h(6): note: see declaration of 'Venue'
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.cpp(69): error C2270: 'findEvent': modifiers not allowed on nonmember functions
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.cpp(73): error C2065: 'scheduledEvents': undeclared identifier
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.cpp(73): error C2228: left of '.getTitle' must have class/struct/union
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.cpp(75): error C2065: 'scheduledEvents': undeclared identifier
+         Main.cpp
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\event.h(9): error C3646: 'Title': unknown override specifier
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\event.h(9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\event.h(12): error C2061: syntax error: identifier 'string'
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\event.h(14): error C3646: 'getTitle': unknown override specifier
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\event.h(14): error C2059: syntax error: '('
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\event.h(14): error C2238: unexpected token(s) preceding ';'
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\event.h(16): error C2061: syntax error: identifier 'string'
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.h(12): error C2061: syntax error: identifier 'string'
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\venue.h(15): error C2061: syntax error: identifier 'string'
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\main.cpp(22): error C2660: 'Venue::addEvent': function does not take 2 arguments
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\main.cpp(23): error C2660: 'Venue::addEvent': function does not take 2 arguments
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\main.cpp(24): error C2660: 'Venue::addEvent': function does not take 2 arguments
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\main.cpp(26): error C2039: 'getTitle': is not a member of 'Event'
+         d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\event.h(6): note: see declaration of 'Event'
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\main.cpp(27): error C2664: 'Event Venue::findEvent(void) const': cannot convert argument 1 from 'const char [14]' to 'int'
+         d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\main.cpp(27): note: There is no context in which this conversion is possible
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\main.cpp(27): error C2228: left of '.getTime' must have class/struct/union
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\main.cpp(28): error C2664: 'Event Venue::findEvent(void) const': cannot convert argument 1 from 'const char [6]' to 'int'
+         d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\main.cpp(28): note: There is no context in which this conversion is possible
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\main.cpp(28): error C2228: left of '.getTime' must have class/struct/union
+         Event.cpp
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\event.h(9): error C3646: 'Title': unknown override specifier
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\event.h(9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\event.h(12): error C2061: syntax error: identifier 'string'
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\event.h(14): error C3646: 'getTitle': unknown override specifier
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\event.h(14): error C2059: syntax error: '('
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\event.h(14): error C2238: unexpected token(s) preceding ';'
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\event.h(16): error C2061: syntax error: identifier 'string'
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\event.cpp(12): error C2065: 'Title': undeclared identifier
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\event.cpp(17): error C2511: 'Event::Event(int,std::string)': overloaded member function not found in 'Event'
+         d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\event.h(6): note: see declaration of 'Event'
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\event.cpp(18): error C2597: illegal reference to non-static member 'Event::Time'
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\event.cpp(19): error C2065: 'Title': undeclared identifier
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\event.cpp(29): error C2039: 'getTitle': is not a member of 'Event'
+         d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\event.h(6): note: see declaration of 'Event'
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\event.cpp(30): error C2270: 'getTitle': modifiers not allowed on nonmember functions
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\event.cpp(31): error C2065: 'Title': undeclared identifier
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\event.cpp(42): error C2511: 'void Event::setTitle(std::string)': overloaded member function not found in 'Event'
+         d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\event.h(6): note: see declaration of 'Event'
+     1>d:\computer science\programs\cs172_exam_1_jacob_martin\cs172_exam_1_jacob_martin\event.cpp(43): error C2065: 'Title': undeclared identifier
+         Generating Code...
+     1>Done Building Project "D:\Computer Science\Programs\CS172_Exam_1_Jacob_Martin\CS172_Exam_1_Jacob_Martin\CS172_Exam_1_Jacob_Martin.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.90
