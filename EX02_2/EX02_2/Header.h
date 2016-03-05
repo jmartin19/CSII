@@ -19,7 +19,7 @@ public:
 		if (descriminant < 0)
 			return root;
 		else
-		{
+		{																		//Derek- math is a little off.. due to some () same for next -2
 			root = (-b + pow(b*b - (4 * a*c), 1 / 2)) / (2 * a);
 			return root;
 		}

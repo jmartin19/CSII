@@ -21,7 +21,8 @@ int main()
 	Fan customFan(3, true, 8);
 	//outputs values of custom fan
 	cout << customFan.getspeed() << "  " << customFan.geton() << "  " << customFan.getradius() << endl;
-	//changes value of custom fan using setters
+	//changes value of custom fan using setters	
+											//Derek - nice job using these setters, they look great well done :)
 	customFan.setspeed(2);
 	customFan.seton(false);
 	customFan.setradius(9);
