@@ -1,0 +1,32 @@
+﻿Build started 4/21/2016 10:40:23 PM.
+     1>Project "D:\Computer Science\Programs\HW_6\EX06_4\EX06_4\EX06_4.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Main.cpp
+         Main.cpp
+     1>d:\computer science\programs\hw_6\ex06_4\ex06_4\main.cpp(24): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+         d:\computer science\programs\hw_6\ex06_4\ex06_4\main.cpp(60): note: see reference to function template instantiation 'void shuffle<int>(std::vector<int,std::allocator<_Ty>> &)' being compiled
+                 with
+                 [
+                     _Ty=int
+                 ]
+     1>d:\computer science\programs\hw_6\ex06_4\ex06_4\main.cpp(28): error C2131: expression did not evaluate to a constant
+         d:\computer science\programs\hw_6\ex06_4\ex06_4\main.cpp(28): note: failure was caused by call of undefined function or one not declared 'constexpr'
+         d:\computer science\programs\hw_6\ex06_4\ex06_4\main.cpp(28): note: see usage of 'std::vector<int,std::allocator<_Ty>>::size'
+                 with
+                 [
+                     _Ty=int
+                 ]
+     1>d:\computer science\programs\hw_6\ex06_4\ex06_4\main.cpp(29): warning C4018: '<': signed/unsigned mismatch
+     1>d:\computer science\programs\hw_6\ex06_4\ex06_4\main.cpp(32): error C3867: 'std::vector<int,std::allocator<_Ty>>::size': non-standard syntax; use '&' to create a pointer to member
+                 with
+                 [
+                     _Ty=int
+                 ]
+     1>d:\computer science\programs\hw_6\ex06_4\ex06_4\main.cpp(32): error C2784: 'bool isIncluded(const T [],int,T)': could not deduce template argument for 'const T []' from 'int ['function']'
+         d:\computer science\programs\hw_6\ex06_4\ex06_4\main.cpp(9): note: see declaration of 'isIncluded'
+     1>d:\computer science\programs\hw_6\ex06_4\ex06_4\main.cpp(34): error C3863: array type 'int ['function']' is not assignable
+     1>Done Building Project "D:\Computer Science\Programs\HW_6\EX06_4\EX06_4\EX06_4.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.39
