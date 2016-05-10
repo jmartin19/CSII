@@ -17,52 +17,51 @@ Player::Player(string playername, vector<card> pile) //constructor for the playe
 	hand[0] = cardef;
 	for (int i = 1; 1 < numberOfCards; i++)
 	{
-		hand[i] = pile[0]; //draw function possibly needs to be changed
-		pile.erase(pile.begin());
+		hand[i] = pile[0]; //draws 4 more cards into player's hand
+		pile.erase(pile.begin()); //erases the cards that were drawn from the pile
 	}
 }
 
-string Player::lookUp(int num) //you will have to strings as char
-// use get function in card class to determine the card type.
+string Player::lookUp(int num) //looks up a card in the players hand
 {
-	string name = hand[num].getType();
+	string name = hand[num].getType(); //gets the card type to compare to
 
-	
-	if (name == "attack")
+
+	if (name == "Attack")
 	{
 		cout << "When played, the player to your left will take two turns instead of one. This will force them to draw two cards instead of one." << endl;
-		
+
 	}
-	if (name == "see the future")
+	if (name == "See the Future")
 	{
 		cout << "Look at the top 3 cards in the deck. Don't show them to the other players and replace them in the same order when done." << endl;
-	
+
 	}
-	if (name == "nope")
+	if (name == "Nope")
 	{
 		cout << "Nope negates the last action card that was played. Oddly enough, it does not negate exploding kittens or defuse cards." << endl;
-		
+
 	}
-	if (name =="shuffle")
+	if (name == "Shuffle")
 	{
-			cout << "Shuffles the draw pile." << endl;
-			
+		cout << "Shuffles the draw pile." << endl;
+
 	}
-	if (name == "favor")
+	if (name == "Favor")
 	{
 		cout << "Choose one player to give you a card of their choice." << endl;
 	}
-	if (name == "skip")
+	if (name == "Skip")
 	{
 		cout << "The skip card will cause you to end your turn without drawing a card. After you play this card, your turn is over." << endl;
-	
+
 	}
-	if (name == "cat card")
+	if (name == "Tacocat" || name == "Cattermelon" || name == "Hairy Potato Cat" || name == "Rainbow-Ralphing Cat" || name == "Beard Cat")
 	{
 		cout << "A funny image of a cat is on this card. If you have another cat card, you could pair them up and play them like an action card. Playing a pair allows you to steal another player's card from their hand without looking." << endl;
 			
 	}
-	if (name == "defuse")
+	if (name == "Defuse")
 	{
 		cout << "You can successfully defuse an exploding kitten." << endl;
 		
@@ -74,24 +73,24 @@ string Player::lookUp(int num) //you will have to strings as char
 	}
 }
 
-void Player::shuffle(vector<card> pile)
+void Player::shuffle(vector<card> pile) //shuffles the vector called pile (the deck)
 {
-	int numbercard = pile.size();
-	srand(time(NULL));
-	for (int i = 0; i < numbercard; i++)
+	int numbercard = pile.size(); //gets the size of the pile at this point
+	srand(time(NULL));  //starts a random number generator based on time
+	for (int i = 0; i < numbercard; i++) //shuffles the cards by using the vector function swap
 	{
 		int n = i + rand() % (numbercard - i);
 		swap(pile[i], pile[n]);
 	}
 }
 
-void Player::seeFuture(vector <card> pile)
+void Player::seeFuture(vector <card> pile) //player looks at the top three cards of the pile (the deck)
 {
 	
 	cout << "Other players should turn away!" << endl;
-	cout << "Card on top: " << pile[0].getType() << "." << endl;
-	cout << "Second card: " << pile[1].getType() << "." << endl;
-	cout << "Third card: " << pile[2].getType() << "." << endl;
+	cout << "Card on top: " << pile[0].getType() << "." << endl; //first card
+	cout << "Second card: " << pile[1].getType() << "." << endl; //second card
+	cout << "Third card: " << pile[2].getType() << "." << endl; //third card
 }
 
 card Player::endTurn(bool& attack, bool& skip)
