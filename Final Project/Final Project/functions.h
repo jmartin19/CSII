@@ -5,7 +5,8 @@
 #include <vector>
 using namespace std;
 
-void shuffleDeck(vector<card> pile); //seperate function to shuffle the deck
+template<typename T>
+void shuffleDeck(vector<T>& pile); //seperate function to shuffle the deck
 
 
 

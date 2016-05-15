@@ -1,7 +1,8 @@
 #include "functions.h"
 #include <time.h>
 
-void shuffleDeck(vector<card> pile)
+
+void shuffleDeck(vector<card>& pile)
 {
 	int numbercard = pile.size(); //gets the size of the pile at this point
 	srand(time(NULL));  //starts a random number generator based on time
