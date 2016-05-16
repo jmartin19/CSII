@@ -29,8 +29,10 @@ public:
 	void shuffle(vector<card> pile); //mix up the cards in the draw pile
 	void seeFuture(vector<card> pile); //look 3 cards into the draw pile
 	card pair(Player p); //take a random card from anoter player
-	string getName();//return name of player
-	bool getDead();//returns if the player is dead or not
+	void nope(int & nope, Player*, int numPlayers); //stops another player's action
+	string getName() { return name; }; //return name of player
+	bool getDead(); //returns if the player is dead
+	int linearSearchPair(string key, int choice);
 };
 
 #endif

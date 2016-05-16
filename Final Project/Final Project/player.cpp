@@ -1,5 +1,8 @@
+
+
 #include"Player.h"
 #include"card.h"
+#include"functions.h"
 
 Player::Player() //default constructor for the player class
 {
@@ -42,9 +45,34 @@ void Player::endTurn(bool & attack, bool & skip, vector<card> & pile)
 
 	while (turns != 0)
 	{
-		numberOfCards++; //increment total number of cards held by player
 		hand.push_back(pile.back()); //ADD TOP CARD FROM DECK
+		card drawnCard = pile.back();
 		pile.pop_back(); //delete card from top of deck
+		cout << endl << "You drew: " << drawnCard.getType() << endl; //output card drawn by player
+		if (hand.back().getType() == "Exploding Kitten") //check if player drew an exploding kitten
+		{
+			bool hasDefuse = false; //declare flag for whether or not player has defuse card for kitten
+			int defuseLocation; //stores location of nope card in player's hand
+			for (int p = 0; p < hand.size(); p++)
+			{
+				if (hand[p].getType() == "Defuse")
+				{
+					hasDefuse = true; //set flag to true if player has nope card
+					defuseLocation = p;
+				}
+			}
+			if (hasDefuse == true)
+			{
+				hand.erase(hand.begin() + defuseLocation); //delete defuse card
+				cout << "\nExploding Kitten successfully defused, you live... for now.\n";
+			}
+
+			else
+			{
+				dead = true; //kills the player if they don't have a defuse
+				cout << "\nBOOOOOOOOM. You have no defuse card, so the Exploding Kitten killed you.\nYou're out of the game.\n";
+			}
+		}
 		turns--; //ends loop if player has taken appropriate number of turns
 	}
 
@@ -161,18 +189,60 @@ card Player::pair(Player p)
 	return returnCard;
 }
 
-string Player::getName()
+void Player::nope(int & nope, Player* Players, int numPlayers) //stops another player's action
 {
-	return name;
+	bool hasNope = false; //flag to test if player has nope card to play
+	int nopeLocation; //stores location of nope card in player's hand
+	for (int p = 0; p < hand.size(); p++)
+	{
+		if (hand[p].getType == "Nope")
+		{
+			hasNope = true; //set flag to true if player has nope card
+			nopeLocation = p;
+		}
+	}
+
+	if (hasNope == true)
+	{
+		hand.erase(hand.begin() + nopeLocation); //removes nope from player's hand
+		nope++; //increments nope integer in main function
+	}
+
+	cout << "Anybody gonna nope that nope? y/n: "; //prompt players to play nope cards
+	char nope;
+	cin >> nope; //accept nopes
+
+	if (nope == 'y')
+	{
+		int nopePlayer; //stores name of player who played nope
+		cout << "\nAlright, who noped that? Input your number."; //prompts player to own up to nope
+		for (int z = 0; z < numPlayers; z++) //output list of players
+		{
+			cout << z << ". " << Players[z].getName();
+		}
+		cin >> nopePlayer; //input player who noped
+		Players[nopePlayer].nope(nope, Players, numPlayers); //run appropriate player's nope function
+	}
+}
+
+int Player::linearSearchPair(string key, int choice) //enter an array of any type and an "item" of the same type to search in the array
+{
+	int arraySize = hand.size();
+	for (int i = 0; i < arraySize; i++)
+	{
+
+		if (key == hand[i].getType())
+		{
+			if (i = !choice)
+			{
+				return i; //returns which number in the array the item was found
+			}
+		}
+	}
+	return -1; //returns that nothing was found
 }
 
 bool Player::getDead()
 {
 	return dead;
 }
-
-//What I would write in the "for loop" for the player turns in main
-//if(Player[n].getDead() == true)
-// {
-//   Player[n].skip(Skip);
-// }
